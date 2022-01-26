@@ -27,6 +27,10 @@ body {
   overflow: hidden !important;
 }
 
+#root {
+    overflow: hidden !important;
+}
+
 main {
   max-width: 600px;
   margin: 2rem auto;
@@ -147,7 +151,6 @@ main {
 @media screen and (max-width: 576px) {
   html {
     min-height: 100vh;
-    overflow: hidden !important;
   }
 
   .logo-bg {
