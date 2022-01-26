@@ -28,7 +28,8 @@ body {
 }
 
 #root {
-    overflow: hidden !important;
+  overflow: hidden !important;
+  position: relative;
 }
 
 main {
