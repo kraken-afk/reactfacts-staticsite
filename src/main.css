@@ -1,0 +1,171 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*:focus {
+  background-color: transparent;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --prime-color: #60dafb;
+  --secondary-color: #1f232a;
+
+  --font-color: #000;
+  --background-color: #fff;
+  --logo-bg-color: rgb(209, 209, 209);
+}
+
+body {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  color: var(--font-color);
+  background-color: var(--background-color);
+
+  overflow-x: hidden;
+}
+
+main {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0 8px;
+}
+
+.nav {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  background-color: var(--secondary-color);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo img {
+  width: 6rem;
+  animation: rotate 20s cubic-bezier(0, 0, 0, 0) infinite forwards;
+}
+
+.nav-logo > span {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--prime-color);
+  transform: translateX(-1rem);
+}
+
+.nav-links {
+  list-style-type: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.nav-links li {
+  margin-right: 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.main h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.main h2 {
+  margin-bottom: 1rem;
+}
+
+.main li {
+  display: block;
+  width: max-content;
+  font-size: 1rem;
+  list-style-type: none;
+  margin-bottom: .6rem;
+  margin-left: 1rem;
+  font-weight: 600;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.main li::before {
+  content: '';
+  position: absolute;
+  width: .5rem;
+  height: .5rem;
+  border-radius: 50%;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--prime-color);
+}
+
+.logo-bg {
+  position: absolute;
+  z-index: -1;
+  top: 18%;
+  left: 50%;
+}
+
+.logo-bg g {
+  fill: var(--logo-bg-color);
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg) scale(.7);
+  }
+
+  to {
+    transform: rotate(360deg) scale(.7);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+ :root {
+  --font-color: #fff;
+  --background-color: #1f232a;
+  --secondary-color: hsl(218, 15%, 10%);
+
+  --logo-bg-color: hsl(218, 15%, 10%);
+ } 
+
+ .nav {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+ }
+}
+
+@media screen and (max-width: 576px) {
+  .main h1 {
+    font-size: 2.5rem;
+  }
+
+  .main h2 {
+    font-size: 2rem;
+  }
+
+  .main li {
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav {
+    padding: 0;
+    justify-content: center;
+  }
+
+}
